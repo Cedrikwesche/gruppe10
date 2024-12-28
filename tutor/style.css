@@ -4,7 +4,7 @@
     --text-color: black;
     --accent-color: #28497c;
     /*studip blue*/
-}
+} 
 
 @media (prefers-color-scheme: dark) {
     :root {
