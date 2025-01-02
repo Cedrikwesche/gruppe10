@@ -351,11 +351,15 @@ dialog {
     border-radius: 5px;
     box-shadow: 0 0 #0000, 0 0 #0000, 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     padding: 1rem;
-    max-width: 400px;
+    /*max-width: 600px;*/
+	height:50%;
+	width:80%;
     margin: auto;
     background-color: var(--bg-color);
     color: var(--text-color);
+	overflow:hidden;
 }
+
 
 dialog>div {
     padding: 10px;
@@ -373,6 +377,7 @@ dialog>div {
     max-height: 100%;
     overflow: scroll;
 }
+
 
 .dialog-close {
     font-size: 10pt;
@@ -504,4 +509,8 @@ th, td{
 	margin: 0px;
 	padding: 5px;
 	border: 2px solid white;
+}
+
+u:hover{
+	cursor:pointer;
 }

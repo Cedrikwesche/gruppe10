@@ -51,6 +51,7 @@
         <div class="main">
             <div class="section-header">Abgaben</div>
             <div class="center-container">
+				<h6>Tutuor: <u onclick="document.getElementById('mail-dialog').showModal()">Konrad Korrektur</u></h6><br>
                 <table>
 					<tr>
 						<th>Assignment</th>
@@ -60,16 +61,27 @@
 					<tr>
 						<td>Assignment 1</td>
 						<td><div id="assignment1"></div></td>
-						<td>File xy</td>
+						<td><a href="Korrektur.pdf" target=”_blank” style="color:#ffffff" >assignment1_korrektur.pdf</a></td>
 					</tr>
 					<tr>
 						<td>Assignment 2</td>
 						<td><div id="assignment2"></div></td>
-						<td>File xy</td>
+						<td><a href="Korrektur.pdf" target=”_blank” style="color:#ffffff" >assignment2_korrektur.pdf</a></td>
 					</tr>
 				</table>
 				<button onclick="window.location='student.html';" id="back-button" class="button">Zurück</button>
 			</div>
+			<dialog id="mail-dialog">
+                    <div id="mail-dialog-content">
+						<form>
+							<h6>Schreiben sie ihren Tutor eine Nachricht</h6><br>
+							<input type="text" placeholder="Betreff"><br/>
+							<textarea type="textarea" placeholder="Nachricht" style="width:400px; height:300px"></textarea><br/>
+						</form> 
+					</div>
+                    <button class="button dialog-close"
+                        onclick="document.getElementById('mail-dialog').close()">Abseden</button>
+                </dialog>
         </div>
         <div class="footer">
             <small class="curr-time-date center"></small>
