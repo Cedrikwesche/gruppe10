@@ -7,6 +7,7 @@
     <title>Assignment System (Tutor)</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+	<script src="couch.js" defer></script>
 </head>
 
 <body>
@@ -39,7 +40,9 @@
                     </button>
                     <div class="dropdown-content center">
                         <div>Name</div>
-                        <a href="logout.html">Logout</a>
+						<a href="../settings.html">Einstellungen</a>
+						<a href="../student/student.html">Student-View</a>
+                        <a href="../logout.html">Logout</a>
                     </div>
                 </div>
             </div>
@@ -107,7 +110,13 @@
                 <button onclick="document.getElementById('punkte-dialog').showModal()" id="punkte-button"
                     class="button inactive">Punkte</button>
                 <dialog id="punkte-dialog">
-                    <div id="punkte-dialog-content">Hier könnte eine Tabelle mit den eingetragenen Punkten sein.</div>
+                    <div id="punkte-dialog-content">
+						<form>
+							<!--<input type="text" name="assignment1" id="assignment1" oninput="set('assignment1')"><br/>-->
+							<h6>Tragen sie bitte die Punkte ein:</h6><br>
+							<input type="text" name="assignment2" id="assignment2" oninput="set('assignment2')"><br/>
+						</form> 
+					</div>
                     <button class="button dialog-close"
                         onclick="document.getElementById('punkte-dialog').close()">close</button>
                 </dialog>
