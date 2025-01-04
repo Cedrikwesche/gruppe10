@@ -26,6 +26,9 @@ body {
     height: 100%;
 }
 
+.laufschrift{
+    grid-area: bar;
+}
 
 .header {
     grid-area: header;
@@ -68,10 +71,11 @@ body {
 .grid-container {
     display: grid;
     grid-template-areas:
+        'bar bar bar'
         'header header header'
         'main main main'
         'footer footer footer';
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-columns: calc(50% - 1.5px) 3px calc(50% - 1.5px);
     gap: 0;
     padding: 0;
