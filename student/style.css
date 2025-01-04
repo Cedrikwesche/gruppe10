@@ -518,3 +518,20 @@ u:hover{
 #mail-dialog{
     overflow-y: auto;
 }
+
+/*laufschrift*/
+.laufschrift {
+	grid-area: bar;
+    color: rgb(1,1,1, 1) ;
+	font-size: 25px ;
+	font-weight: 600; 
+    padding-top: 0px ;
+}
+
+
+.laufschrift-chat {
+    color: red ;
+	font-size: 25px ;
+	font-weight: 600; 
+    padding-top: 0px ;
+}
