@@ -514,3 +514,7 @@ th, td{
 u:hover{
 	cursor:pointer;
 }
+
+#mail-dialog{
+    overflow-y: auto;
+}
