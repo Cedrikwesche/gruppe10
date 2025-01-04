@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment System (Student)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div>
+                <div class="dropdown" id="course-dropdown">
+                    <button class="dropbtn arrow-down dropdown-select">Dropdown
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Prog 1</a>
+                        <a href="#">Prog 2</a>
+                        <a href="#">GMCI</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="dropdown" id="uebung-nr-dropdown">
+                    <button class="dropbtn arrow-down dropdown-select">Dropdown
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Übung01</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="dropbtn arrow-down">Dropdown
+                    </button>
+                    <div class="dropdown-content center">
+                        <div>Gottfried W. Leibniz</div>
+						<a href="../settings.html">Einstellungen</a>
+						<a href="../tutor/tutor.html">Tutor-View</a>
+                        <a href="../logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="section-header">Aktuelle Abgabe</div>
+            <div class="center-container">
+                <div id="upload-area" ondrop="handleDrop(event)">
+                    <form class="popup" onmouseenter="showPopUp(this)" onmouseleave="hidePopUp(this)">
+                        <!-- https://css.gg/icon/file-add -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 18V16H8V14H10V12H12V14H14V16H12V18H10Z" fill="currentColor" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z"
+                                fill="currentColor" />
+                        </svg><br />
+                        <input type="file" id="file-input" onchange="handleFileSelect(this)" multiple hidden>
+                        <label for="file-input"><strong>Choose a file</strong><span> or drag it
+                                here</span>.</label>
+                        <div id="upload_uploaded_text"></div>
+                        <dialog id="uploaded-files-dialog">
+                            <div id="uploaded-files-dialog-content"></div>
+                            <button class="button dialog-close"
+                                onclick="document.getElementById('uploaded-files-dialog').close()">close</button>
+                        </dialog>
+                        <div id="upload_loader"></div>
+                        <span class="popuptext">Lade die Korrekturen als einzelne Dateien hoch.</span>
+                    </form>
+                </div>
+
+                <button onclick="window.location='stud-grade.html';" id="back-button"
+                    class="button ">Punkte</button>
+                
+            </div>
+        </div>
+
+        <div class="footer">
+            <small class="curr-time-date center"></small>
+        </div>
+    </div>
+</body>
+
+</html>
