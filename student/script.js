@@ -126,7 +126,7 @@ function update_uploaded_file_info() {
         });
     } else {
         upload_uploaded_text.textContent = "";
-        document.getElementById("punkte-button").classList.add("inactive");
+        // document.getElementById("punkte-button").classList.add("inactive");
     }
 }
 
@@ -183,14 +183,6 @@ btn.value = latest_link.textContent;
 if (!(dropdownSelectionKey() in uploaded_files)) uploaded_files[dropdownSelectionKey()] = [];
 if (dropArea) {
 		update_uploaded_file_info();
-
-		// close the punkte dialog when clicked
-		const dialog = document.getElementById("punkte-dialog");
-		dialog.addEventListener('click', (event) => {
-		if (event.target.id !== 'punkte-dialog-content') {
-			dialog.close();
-		}
-	});
 }
 
 // change download button icon
