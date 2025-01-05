@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment System </title>
+	<style>
+		*{
+			padding: 0px;
+			margin: 0px;
+			font-family: "Verdana", "Courier New", Sans-serif;
+		}
+
+		.header{
+			background:#28497c;
+			padding:2px;
+			color:#ffffff;
+			height:5%;
+		}
+
+		html, body{
+			
+			background-color:#f6f2eb;
+			height:100%;
+		}
+
+		h1{
+			margin-left:8px;
+		}
+
+		.login{
+			
+			display: block;
+			margin-top: 150px;
+			margin-right: auto;
+			margin-left: auto;
+			width: 600px;
+			background-color:#ffffff;
+			padding:20px;
+			height:400px;
+			border-radius:25px;
+			text-align:center;
+			
+		}
+
+		.login input{
+			font-size:100%;
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			padding:3px;
+			width:80%;
+			height:40px;
+			border-radius:5px;
+			border:1px solid gray;
+			
+		}
+
+		.submit:enabled{
+			transition:0.5s;
+			background-color:#28497c;
+			color:#ffffff;
+		}
+		.submit:enabled:hover{	
+			width:82%;
+			transition:0.5s;
+			background-color:#203252;
+		}
+
+		.submit:disabled:hover{	
+			width:78%;
+			transition:0.5s;
+			border:1px solid red;
+		}
+	</style>
+</head>
+
+<body>
+    <div class="header">
+		<h1>LUH Assignment System</h1>
+    </div>
+		
+	<div class="login">
+		<h1 style="padding-bottom:15px">Assignment System</h1>
+		<form action="websso_demo.html">
+			<input type="text" placeholder="Username"><br>
+			<input type="password" placeholder="Password"><br>
+			<input class="submit" type="submit" value="Login" disabled/>
+			<p style="padding-bottom:5px">or</p>
+			<input class="submit" type="submit" value="Login via WebSSO" />
+		</form>
+	</div>
+</body>
+
+</html>

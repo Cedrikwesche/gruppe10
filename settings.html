@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment System</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="couch.js" defer></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div>
+                <div class="dropdown" id="course-dropdown">
+                </div>
+            </div>
+            <div>
+                <div class="dropdown" id="uebung-nr-dropdown">
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="dropbtn arrow-down">Dropdown
+                    </button>
+                    <div class="dropdown-content center">
+                        <div>Gottfried W. Leibniz</div>
+						<a href="settings.html">Einstellungen</a>
+						<a href="tutor/tutor.html">Tutor-View</a>
+						<a href="student/student.html">Student-View</a>
+                        <a href="logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="section-header">Einstellungen</div>
+            <div class="center-container">
+                <button onclick="createDB();" id="back-button" class="button">Create DB</button>
+				<form>
+					<input type="text" name="assignment1" id="assignment1" oninput="set('assignment1')"><br/>
+					<input type="text" name="assignment2" id="assignment2" oninput="set('assignment2')"><br/>
+				</form> 
+            </div>
+        </div>
+
+        <div class="footer">
+            <small class="curr-time-date center"></small>
+        </div>
+    </div>
+</body>
+
+</html>

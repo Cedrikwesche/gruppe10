@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment System (Student)</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+	<script type="text/javascript" src="stud.js"></script>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="header">
+            <div>
+                <div class="dropdown" id="course-dropdown">
+                    <button class="dropbtn arrow-down dropdown-select">Dropdown
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Prog 1</a>
+                        <a href="#">Prog 2</a>
+                        <a href="#">GMCI</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="dropdown" id="uebung-nr-dropdown">
+                    <button class="dropbtn arrow-down dropdown-select">Dropdown
+                    </button>
+                    <div class="dropdown-content">
+                        <a href="#">Übung01</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="dropbtn arrow-down">Dropdown
+                    </button>
+                    <div class="dropdown-content center">
+                        <div>Gottfried W. Leibniz</div>
+						<a href="../settings.html">Einstellungen</a>
+						<a href="../tutor/tutor.html">Tutor-View</a>
+                        <a href="../logout.html">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="section-header">Abgaben</div>
+            <div class="center-container">
+				<h6>Tutor: <u onclick="document.getElementById('mail-dialog').showModal()">Konrad Korrektur</u></h6><br>
+                <table>
+					<tr>
+						<th>Assignment</th>
+						<th>Grades</th>
+						<th>Korrektur</th>
+					</tr>
+					<tr>
+						<td>Assignment 1</td>
+						<td><div id="assignment1"></div></td>
+						<td><a href="Korrektur.pdf" target=”_blank” style="color:#ffffff" >assignment1_korrektur.pdf</a></td>
+					</tr>
+					<tr>
+						<td>Assignment 2</td>
+						<td><div id="assignment2"></div></td>
+						<td><a href="Korrektur.pdf" target=”_blank” style="color:#ffffff" >assignment2_korrektur.pdf</a></td>
+					</tr>
+				</table>
+				<button onclick="window.location='student.html';" id="back-button" class="button">Zurück</button>
+			</div>
+			<dialog id="mail-dialog">
+                    <div id="mail-dialog-content">
+						<form>
+							<h6>Schreiben sie ihren Tutor eine Nachricht</h6><br>
+							<input type="text" placeholder="Betreff"><br/>
+							<textarea type="textarea" placeholder="Nachricht" style="width:400px; height:300px"></textarea><br/>
+						</form> 
+					</div>
+                    <button class="button dialog-close"
+                        onclick="document.getElementById('mail-dialog').close()">Absenden</button>
+                </dialog>
+        </div>
+        <div class="footer">
+            <small class="curr-time-date center"></small>
+        </div>
+    </div>
+</body>
+
+</html>
