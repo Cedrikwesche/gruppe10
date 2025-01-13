@@ -70,21 +70,31 @@ async function handleFiles(files) {
     if (files.length) {
         fileInput.files = files;
 
-        var upload_loader = document.getElementById("upload_loader");
-        upload_loader.classList.remove("fade-out");
-        upload_loader.classList.add("loader");
-        upload_loader.classList.add("fade");
+ let fileNames = [];
+        for (let i = 0; i < files.length; i++) {
+            fileNames.push(files[i].name);
+        }
+        let fileNamesList = fileNames.join('\n');
+        let userConfirmed = confirm("Are you sure you want to upload these files?\n\n" + fileNamesList);
+        if (userConfirmed) {
 
-        // cache files locally
-        for (const file of files)
-            uploaded_files[dropdownSelectionKey()].push(file);
+            var upload_loader = document.getElementById("upload_loader");
+            upload_loader.classList.remove("fade-out");
+            upload_loader.classList.add("loader");
+            upload_loader.classList.add("fade");
 
-        // send files to server
-        await uploadFilesToServer(files);
+            // cache files locally
+            for (const file of files)
+                uploaded_files[dropdownSelectionKey()].push(file);
 
-        upload_loader.classList.add("fade-out");
+            // send files to server
+            await uploadFilesToServer(files);
 
-        update_uploaded_file_info();
+            upload_loader.classList.add("fade-out");
+
+            update_uploaded_file_info();
+        }
+
     }
 }
 
