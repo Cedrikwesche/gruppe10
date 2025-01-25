@@ -201,6 +201,13 @@ function buttonDownload(element) {
     element.getElementsByClassName("button-download")[0].getElementsByClassName("download-check")[0].classList.remove("hide");
 }
 
+function deleteAllUploads() {
+    if (confirm("Möchten Sie wirklich alle hochgeladenen Dateien löschen?")) {
+        uploaded_files = {}; // Alle Dateien zurücksetzen
+        upload_uploaded_text.textContent = "";
+    }
+}
+
 /**
  * set current time and date in footer
  */
