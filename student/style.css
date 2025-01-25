@@ -521,6 +521,16 @@ u:hover{
 
 #mail-dialog{
     overflow-y: auto;
+   .close{
+        font-size: 18pt;
+        position: absolute;
+        top: 0px;
+        right: 20px;
+    }
+    .close:hover{
+        cursor: pointer;
+    }
+
 }
 
 /*laufschrift*/
