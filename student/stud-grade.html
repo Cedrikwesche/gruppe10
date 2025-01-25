@@ -80,7 +80,7 @@
 						</form> 
 					</div>
                     <button class="button dialog-close"
-                        onclick="document.getElementById('mail-dialog').close()">Absenden</button>
+                        onclick="if (confirm('Nachricht abschicken?')) document.getElementById('mail-dialog').close()">Absenden</button>
                 </dialog>
         </div>
         <div class="footer">
