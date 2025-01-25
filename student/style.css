@@ -342,10 +342,19 @@ body {
 }
 
 #back-button {
-    margin: 60px;
+    margin: 10px;
     font-size: 18px;
     min-height: 2.5rem;
     background-color: var(--light-bg-color);
+    box-shadow: none;
+    padding: calc(.4rem - 1px) calc(0.7rem - 1px);
+}
+
+#del-button {
+    margin: 30px;
+    font-size: 18px;
+    min-height: 2.5rem;
+    background-color: #ec5353;
     box-shadow: none;
     padding: calc(.4rem - 1px) calc(0.7rem - 1px);
 }
